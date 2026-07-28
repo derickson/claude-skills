@@ -1,0 +1,1 @@
+We are working inside a worktree.  I am ready to merge my committed changes back into the main branch. Do that. and give me a report on any uncommitted changes that might be at risk if I destroy this worktree

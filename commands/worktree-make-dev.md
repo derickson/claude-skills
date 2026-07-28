@@ -1,0 +1,1 @@
+ In a project specific way (understanding the Makefile for each project and .env locations will be different) start the local development environment `make dev` equivalent  for this project from within this  worktree (which may involve creating symlinks to the .env files)
