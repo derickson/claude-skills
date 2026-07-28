@@ -20,6 +20,24 @@ After installation, skills are invoked by name in your coding agent:
 /python-http-server serve this directory
 ```
 
+## Commands
+
+Commands go into `.claude/commands/` and are invoked as `/command-name`. `npx skills` doesn't install commands automatically — copy them manually:
+
+```bash
+# Into the current project
+cp -r "$(npx skills path derickson/claude-skills 2>/dev/null || echo ~/.agents/skills/derickson-claude-skills)/../commands" .claude/
+
+# Or directly from a clone of this repo
+cp path/to/claude-skills/commands/*.md .claude/commands/
+```
+
+| Command | Description |
+|---|---|
+| `git-auto-commit` | Add and commit all changes with a descriptive message |
+| `git-issuebranch-cleanup` | Delete remote branches for merged/closed PRs |
+| `uv-venv-init` | Create a Python venv in `~/.venvs/<project>` with a local symlink |
+
 ## Skills
 
 | Skill | Description | Source |
@@ -45,6 +63,8 @@ After installation, skills are invoked by name in your coding agent:
 ## Structure
 
 ```
+commands/
+  <name>.md           ← slash command; copied to .claude/commands/
 skills/
   <name>/
     SKILL.md          ← required; loaded by the agent
