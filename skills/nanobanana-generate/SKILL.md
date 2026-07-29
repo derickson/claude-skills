@@ -1,6 +1,7 @@
-# nanobanana-generate
-
-Generate images using Google's nano-banana-2 model on Replicate.
+---
+name: nanobanana-generate
+description: Generate images using Google's nano-banana-2 model on Replicate.
+---
 
 ## Usage
 
