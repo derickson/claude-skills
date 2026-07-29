@@ -1,0 +1,43 @@
+{
+  "skill_name": "mp4-to-gif",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "hey can you convert /Users/dave/dev/ffmpeg/dave_work_all_day.mp4 to an animated gif for me?",
+      "expected_output": "A .gif file at /Users/dave/dev/ffmpeg/dave_work_all_day.gif, 320px wide, 10fps, with file size reported",
+      "files": [],
+      "expectations": [
+        "Ran ffprobe on the input file before converting",
+        "Used two-pass FFmpeg conversion (palettegen then paletteuse)",
+        "Output file is /Users/dave/dev/ffmpeg/dave_work_all_day.gif",
+        "Palette temp file was cleaned up (no palette png left behind)",
+        "Reported the output file size"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "make a gif from @dave_work_all_day.mp4 — needs to be small enough to paste inline in gmail",
+      "expected_output": "A .gif file created from the mp4, small enough for email (under 10MB), with size reported",
+      "files": [],
+      "expectations": [
+        "Ran ffprobe on the input file",
+        "Used two-pass FFmpeg conversion (palettegen then paletteuse)",
+        "Output .gif file was created successfully",
+        "Palette temp file was cleaned up",
+        "Reported output file size"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "turn /Users/dave/dev/ffmpeg/dave_work_all_day.mp4 into a gif",
+      "expected_output": "dave_work_all_day.gif created in the same directory as the input, 320x180, 10fps",
+      "files": [],
+      "expectations": [
+        "Output gif is in the same directory as the input mp4",
+        "Used palettegen and paletteuse for two-pass quality",
+        "Palette temp file removed after conversion",
+        "Reported file size of output gif"
+      ]
+    }
+  ]
+}

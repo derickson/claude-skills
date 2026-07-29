@@ -11,7 +11,7 @@ npx skills add derickson/claude-skills
 
 ## common external library skills I like to install globally
 npm install -g @playwright/cli@latest
-npx skills add microsoft/playwright-cli -g -y
+npx skills add microsoft/playwright-cli --agent claude-code -g -y
 
 
 
