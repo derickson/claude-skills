@@ -8,6 +8,16 @@ Personal skill library for Claude Code (and compatible agents). Install into any
 # Into the current project (.claude/skills/)
 npx skills add derickson/claude-skills
 
+
+## common external library skills I like to install globally
+npm install -g @playwright/cli@latest
+npx skills add microsoft/playwright-cli -g -y
+
+
+
+## common external library skills I like to install (per project , for global add -g)
+npx skills add Forward-Future/loopy --skill loopy --agent claude-code -y
+
 # Update all skills
 npx skills update
 ```
